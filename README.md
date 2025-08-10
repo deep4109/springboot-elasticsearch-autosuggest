@@ -5,7 +5,7 @@
 #
 # Here are a few examples to get you started.
 
-PUT product
+PUT products
 {
   "settings": {
     "analysis": {
@@ -36,7 +36,7 @@ PUT product
 }
 
 
-PUT product/_mappings
+PUT products/_mappings
 {
     "properties": {
       "name": {
@@ -47,29 +47,31 @@ PUT product/_mappings
     }
 }
 
-PUT product/_doc/4
+PUT products/_doc/90
 {
-  "id":4,
-  "name":"molle",
+  "id":90,
+  "name":"phone",
   "price":60000,
   "qty": 1
 }
 
-GET product/_search
+GET products/_search
 
 
 
-GET product/_search
+GET products/_search
 {
   "query": {
-    "match": {
-      "name": "mo"
+    "prefix": {
+      "name": {
+        "value": "pho"
+      }
     }
   }
 }
 
 
-POST product/_analyze
+POST products/_analyze
 {
   "field": "name",
   "text": "mo"
