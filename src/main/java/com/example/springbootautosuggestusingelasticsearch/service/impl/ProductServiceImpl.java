@@ -9,8 +9,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-@Autowired
-private ProductRepo    productRepo;
+    @Autowired
+    private ProductRepo productRepo;
+
     @Override
     public Product insertProduct(Product product) {
         return productRepo.save(product);
@@ -21,3 +22,4 @@ private ProductRepo    productRepo;
         return productRepo.findAll();
     }
 }
+
