@@ -5,6 +5,8 @@
 #
 # Here are a few examples to get you started.
 
+DELETE products
+
 PUT product
 {
   "settings": {
