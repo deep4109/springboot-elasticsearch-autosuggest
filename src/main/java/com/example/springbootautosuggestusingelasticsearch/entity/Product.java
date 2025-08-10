@@ -11,7 +11,7 @@ import javax.annotation.processing.SupportedAnnotationTypes;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Document(indexName = "products")
+@Document(indexName = "product")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Product {
     private Integer id;

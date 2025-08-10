@@ -23,7 +23,7 @@ public class ESService {
 
         Supplier<Query> supplier = ESUtil.createSupplierAutoSuggest(partialProductName);
        SearchResponse<Product> searchResponse  = elasticsearchClient
-                .search(s->s.index("products").query(supplier.get()), Product.class);
+                .search(s->s.index("product").query(supplier.get()), Product.class);
         System.out.println(" elasticsearch auto suggestion query"+supplier.get().toString());
         return searchResponse;
     }
